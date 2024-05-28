@@ -1,0 +1,23 @@
+/*这个指令用来包含基础样式，比如重置默认样式、设置全局字体等。这些基础样式会在你的项目中生效，并且是不可覆盖的。*/
+@tailwind base;
+/*这个指令用来包含组件样式，比如按钮、表单元素等。这些组件样式是可选的，你可以根据需要选择性地包含它们。*/
+@tailwind components;
+/*这个指令用来包含实用工具类样式，比如边距、颜色、文本样式等。这些工具类样式是 Tailwind CSS 的核心，它们使得快速构建界面变得非常容易。*/
+@tailwind utilities;
+
+
+/*由于不同浏览器对于数字输入框的样式处理有所不同，这段代码通过使用浏览器特定的 CSS 属性来定制样式，以保持在各个浏览器中的一致性。*/
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
